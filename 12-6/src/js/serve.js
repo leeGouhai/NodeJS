@@ -36,5 +36,5 @@ let app = http.createServer(function(request,response){
 
 //配置监听端口
 app.listen(3006,()=>{
-    console.log("服务器启动成功，端口为3003");
+    console.log("服务器启动成功，端口为3006");
 });
