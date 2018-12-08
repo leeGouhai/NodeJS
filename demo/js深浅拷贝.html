@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [1, [1, 2, 3], { name: "array" }];
+        var array_concat = array.concat();
+        // console.log(array_concat == array);
+        var array_slice = array.slice(0);
+        //改变array_concat中数组元素的值
+        array_concat[1][0] = 5;
+        console.log(array[1]);         //[5,2,3]
+        console.log(array_slice[1]);   //[5,2,3]
+        //改变array_slice中对象元素的值
+        array_slice[2].name = "array_slice";
+        console.log(array[2].name);        //array_slice
+        console.log(array_concat[2].name); //array_slice
+    </script>
+</body>
+
+</html>
