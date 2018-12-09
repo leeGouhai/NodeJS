@@ -5,7 +5,7 @@ const zlip = require("zlib");//内置模块
  
 /** 
  * 读取压缩包
- * 
+ * events模块、stream流、管道流、压缩解压(zlib模块)
 */
 //创建读取流
 let readStream = fs.createReadStream("../myregion.json.zip");
