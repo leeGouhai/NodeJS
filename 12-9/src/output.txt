@@ -1,0 +1,3 @@
+goodmorning
+goodafternoon
+goodnight,lee
