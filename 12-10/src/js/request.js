@@ -1,5 +1,10 @@
 //服务器代理
 /*Request
+*1、get:     查
+*2、post:    改
+*3、put:     增
+*4、delete:  删
+
 可用于发起 http 或 https 请求，可理解成服务端的 ajax 请求。可用于简单的服务器代理，用法和 ajax 类似。
 
 安装： npm install request --save

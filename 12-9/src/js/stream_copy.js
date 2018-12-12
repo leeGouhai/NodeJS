@@ -22,7 +22,7 @@ readStream.on("end",()=>{
 });
 //(3)
 readStream.on("error",(err)=>{
-    // console.log(err.stack);
+    console.log(err.stack);
 });
 
 //创建一个写入流

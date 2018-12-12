@@ -36,11 +36,23 @@ http.createServer((req,res)=>{
     console.log("后缀名:",ext);
     //读取文件
     fs.readFile(realPath,(err,data)=>{
-        try {
+        // try {//尝试运行try里的代码,如果报错,就会执行catch的代码(不会影响代码向后执行)
+        //     res.writeHead(200,{"Content-Type":`${mime[ext]};charset=utf-8`});
+        //     res.end(data);
+        //     console.log("dddd");
+        // } catch (error) {
+        //     console.log(err);
+        //     res.writeHead(404,{"Content-Type":"text/plain;charset=utf-8"});
+        //     res.end(`您访问的url:${pathname}不存在`);
+        //     // res.end(err);
+        // }
+        if(err){
+            res.writeHead(404,{"Content-Type":"text/plain;charset=utf-8"});
+            res.end(`您访问的url:${pathname}不存在`);
+            // res.end(err);
+        } else{
             res.writeHead(200,{"Content-Type":`${mime[ext]};charset=utf-8`});
             res.end(data);
-        } catch (error) {
-            console.log(err);
         }
     });
 
